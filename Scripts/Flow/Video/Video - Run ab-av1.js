@@ -113,6 +113,7 @@ function search(abav1Command){
                 `PATH=${path}:$PATH ` + 
                 abav1Command
             ];
+    executeArgs.EnvironmentalVariables["XDG_CACHE_HOME"] = `${Variables.temp}`
     let returnValue = {
         data: [
             // { crf: 12, score: 12.34, size: 90 }
